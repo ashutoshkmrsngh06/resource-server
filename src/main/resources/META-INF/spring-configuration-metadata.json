@@ -1,0 +1,23 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.ashu.auth.server.config.SecurityProperties",
+      "name": "security",
+      "type": "com.ashu.auth.server.config.SecurityProperties"
+    },
+    {
+      "sourceType": "com.ashu.auth.server.config.SecurityProperties",
+      "name": "security.jwt",
+      "sourceMethod": "getJwt()",
+      "type": "com.ashu.auth.server.config.SecurityProperties$JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.ashu.auth.server.config.SecurityProperties$JwtProperties",
+      "name": "security.jwt.public-key",
+      "type": "org.springframework.core.io.Resource"
+    }
+  ]
+}
