@@ -1,5 +1,8 @@
 server:
   port: 9100
+  servlet.context-path: /ResourceServer
+#server.servletPath=/DataIngestionTool
+debug: true
 
 security:
   jwt:
@@ -27,3 +30,30 @@ spring:
       properties:
         hibernate:
            dialect: org.hibernate.dialect.MySQL5Dialect 
+           
+
+eureka.instance.metadataMap.management.context-path: ${server.servlet.context-path}
+
+#Eureka Related configuration
+eureka.instance.hostname: localhost
+#management.context-path= /DataIngestionTool
+# either relative path
+#eureka.instance.health-check-url-path=${management.context-path}/health
+# or absolute path
+eureka.instance.statusPageUrlPath: ${server.servlet.context-path}/info
+eureka.instance.healthCheckUrlPath: ${server.servlet.context-path}/health
+#eureka.instance.homePageUrl=http://${eureka.instance.hostname}:${server.port}/${server.servlet.context-path}
+#Name of application by which it is registered in eureka server
+spring.application.name: ResourceServer
+#tells about the Eureka server details and its refresh time
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+eureka.instance.leaseExpirationDurationInSeconds: 15
+#Eureka Server Url
+eureka.client.serviceUrl.defaultZone: http://localhost:8762/eureka/
+eureka.client.healthcheck.enabled: true
+eureka.client.lease.duration: 5
+
+#oauth2 enabled for feign client
+#feign.oauth2.enabled=true
+feign.client.config.default.connectTimeout: 160000000
+feign.client.config.default.readTimeout: 160000000
