@@ -1,4 +1,4 @@
-package com.ashu.auth.server.config;
+package com.ashu.resource.server.config;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

@@ -1,4 +1,4 @@
-package com.ashu.auth.server.config;
+package com.ashu.resource.server.config;
 
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 

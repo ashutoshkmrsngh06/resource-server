@@ -1,4 +1,4 @@
-package com.ashu.auth.server.web;
+package com.ashu.resource.server.web;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
